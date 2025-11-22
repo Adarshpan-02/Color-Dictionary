@@ -1,0 +1,174 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000000;
+            min-height: 100vh;
+            padding: 1rem;
+            color: #ffffff;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem 1rem;
+        }
+
+        h1 {
+            font-size: clamp(1.8rem, 5vw, 3rem);
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+            -webkit-background-clip: text;
+            
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            opacity: 0.8;
+            color: #cccccc;
+        }
+
+        .index-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 1rem;
+            max-width: 1400px;
+            margin: 0 auto 3rem;
+            padding: 0 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .index-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+        }
+
+        .index-grid a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem 1rem;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .index-grid a:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(255,255,255,0.2);
+        }
+
+        section {
+            background: #111111;
+            border-radius: 16px;
+            padding: clamp(1.5rem, 4vw, 2.5rem);
+            max-width: 1400px;
+            margin: 2rem auto;
+            box-shadow: 0 8px 24px rgba(255,255,255,0.05);
+            border: 1px solid #222222;
+        }
+
+        section h2 {
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .color-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            }
+        }
+
+        .color-card {
+            background: #1a1a1a;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .color-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(255,255,255,0.1);
+            border-color: #555555;
+        }
+
+        .color-swatch {
+            height: 80px;
+            width: 100%;
+            border-bottom: 1px solid #333333;
+        }
+
+        .color-info {
+            padding: 1rem;
+        }
+
+        .color-name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+
+        .color-code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #667eea;
+            background: #0a0a0a;
+            padding: 0.3rem 0.5rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-top: 0.3rem;
+        }
+
+        .back-to-top {
+            display: block;
+            text-align: center;
+            margin: 2rem auto 0;
+            padding: 0.75rem 1.5rem;
+            background: #222222;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            max-width: 180px;
+            transition: all 0.3s ease;
+            border: 1px solid #333333;
+            font-size: 0.9rem;
+        }
+
+        .back-to-top:hover {
+            background: #333333;
+            transform: translateY(-2px);
+        }
+
+        .color-count {
+            background: #0a0a0a;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            border: 1px solid #222222;
+            font-size: 0.85rem;
+            color: #cccccc;
+        }
